@@ -15,10 +15,10 @@
         <br>
         <label form="survey">What you interesting in</label>
         <select form="survey">
-            <option>Front-End Development</option>
-            <option>Back-End Development</option>
-            <option>Data Science</option>
-            <option>Cyber Security</option>
+            <option value="Front-End Development">Front-End Development</option>
+            <option value="Back-End Development">Back-End Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Cyber Security">Cyber Security</option>
         </select>
         <input type="submit" value="Submit" form="survey">
     </form>
