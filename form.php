@@ -8,13 +8,19 @@
 </head>
 <body>
     <form action="" method="">
-        <label>Username</label>
+        <label>Username: </label>
         <input type="email" name="username" required>
         <br>
-        <label>Password</label>
+        <label>Password: </label>
         <input type="password" name="password" required>
         <br>
-        <button type="submit">Login</button>
+        <label>Select Date</label>
+        <input type="date" name="date" required>
+        <br>
+        <label>Number: </label>
+        <input type="number" name="number" min="0" max="1024" value="1024" required>
+        <hr>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
