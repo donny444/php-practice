@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        function showParty(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "parties.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <select name="users" onchange="showParty(this.value)">
+            <option value="">Select a party:</option>
+            <option value="7">พรรคก้าวไกล</option>
+            <option value="5">พรรคเพื่อไทย</option>
+            <option value="3">พรรคประชาธิปัตย์</option>
+            <option value="6">พรรคไทยภักดี</option>
+        </select>
+    </form>
+    <br>
+    <div id="txtHint"><b>Party info will be listed here...</b></div>
+
+</body>
+
+</html>
+
+<!-- Source:  -->
